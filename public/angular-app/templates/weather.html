@@ -1,8 +1,16 @@
 <navbar></navbar>
-<h1>{{title}}</h1>
-
-<form name="weatherform">
-    <input placeholder="Location" name="locationInput" ng-model="location">
-    <button ng-click="fetchWeatherForLocation(location)">Search</button>
+<div class="weather-banner-container" style="background-image: url('../../img/bannerlatest.png')">
+    <div class="weather-form-container">
+        <form name="weatherform" class="weather-form">
+            <input placeholder="Find your weather.." name="locationInput" ng-model="location">
+            <button ng-click="fetchWeatherForLocation(location)">Search</button>
+           
+        </form>
+    </div>
+</div>
+<div class="weather-result-container">
     <p ng-show="message">{{message}}</p>
-</form>
+</div>
+ 
+
+
