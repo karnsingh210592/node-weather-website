@@ -1,0 +1,8 @@
+<navbar></navbar>
+<h1>{{title}}</h1>
+
+<form name="weatherform">
+    <input placeholder="Location" name="locationInput" ng-model="location">
+    <button ng-click="fetchWeatherForLocation(location)">Search</button>
+    <p ng-show="message">{{message}}</p>
+</form>
