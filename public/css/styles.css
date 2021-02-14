@@ -10,12 +10,28 @@ body {
     min-height: 100vh
 }
 
-.weather-nav-bar {
+.weather-nav-bar-container{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 50px 0;
     max-width: 1170px;
     margin: 0 auto;
+}
+
+.weather-app-info-container{
+    display: flex;
+    cursor: pointer;
+}
+
+.weather-app-logo img {
+    max-width: 100px;
+}
+
+.weather-app-title{
+    margin-left: 5px;
+}
+.weather-app-title h1{
+    font-size: 20px;
 }
 
 .weather-nav-bar a{
@@ -56,6 +72,45 @@ body {
 .weather-result-container{
     max-width: 1170px;
     margin: 0 auto;
+    position: relative;
+}
+
+.weather-app-error-message{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+.weather-result-card{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    width: 420px;
+    background: #323544;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+
+.weather-result-card header{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    color:#bfc1c8;
+}
+
+.weather-result-card main{
+    padding: 30px 20px;
+    color:#bfc1c8;
+}
+
+.weather-result-temperature{
+    font-size: 6.7rem;
+    color: white;
+    font-weight: 700;
+}
+
+.weather-result-temperature sup{ 
+    font-size: 5rem;
 }
 
 h1 {

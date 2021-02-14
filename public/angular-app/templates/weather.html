@@ -4,12 +4,27 @@
         <form name="weatherform" class="weather-form">
             <input placeholder="Find your weather.." name="locationInput" ng-model="location">
             <button ng-click="fetchWeatherForLocation(location)">Search</button>
-           
         </form>
+        <p ng-if="message" class="weather-app-error-message">{{message}}</p>
     </div>
 </div>
-<div class="weather-result-container">
-    <p ng-show="message">{{message}}</p>
+<div class="weather-result-container" ng-if="showForecastContainer">
+    <div class="weather-result-card">
+        <header>
+            {{currentDay | date: 'EEEE'}}
+        </header>
+        <main>
+            <div class="weather-result-location">
+               {{weatherData.location}}
+            </div>
+            <div class="weather-result-temperature">
+                {{weatherData.forecast.temperature}}<sup>o</sup>C
+             </div>
+            <div class="weather-result-icon-continer">
+
+            </div>
+        </main>
+    </div>
 </div>
  
 
