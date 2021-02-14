@@ -21,7 +21,14 @@
                 {{weatherData.forecast.temperature}}<sup>o</sup>C
              </div>
             <div class="weather-result-icon-continer">
-
+                <span>
+                    <img src="../../img/icon-umberella@2x.png" alt="UmbrellarIcon" />
+                    {{weatherData.forecast.precip}} %
+                </span>
+                <span>
+                    <img src="../../img/icon-wind@2x.png" alt="WindIcon" />
+                    {{weatherData.forecast.wind_speed}} km/hr
+                </span>
             </div>
         </main>
     </div>
