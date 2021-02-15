@@ -1,20 +1,16 @@
-const path = require('path')
-const express = require('express')
-const hbs = require('hbs')
-const geocode = require('../utils/geocode')
-const forecast = require('../utils/forecast')
+const path = require('path');
+const express = require('express');
+const geocode = require('../utils/geocode');
+const forecast = require('../utils/forecast');
 
-const app = express()
+const app = express();
 const port = process.env.PORT || 3000 ;
-// Define paths for Express config
-const publicDirectoryPath = path.join(__dirname, '../public')
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials')
+const publicDirectoryPath = path.join(__dirname, '../public');
 
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
-app.use('/node_modules', express.static(path.join(__dirname, '../node_modules')))
+app.use('/node_modules', express.static(path.join(__dirname, '../node_modules')));
 
 
 app.get('/weather', (req, res) => {
