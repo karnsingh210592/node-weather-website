@@ -6,13 +6,12 @@ angular.module('weatherapp').controller('WeatherController', ['$scope','$http', 
     $scope.currentDay = new Date();
 
     $scope.fetchWeatherForLocation = (locationText)=>{
-
+        $scope.showForecastContainer = false;
         if(!locationText){
             $scope.message = "Please enter location to continue."
             return;
         }
         $scope.message = `Loading...`;
-        $scope.showForecastContainer = false;
         let url = `/weather?address=${locationText}`;
 
         $http.get(url).then((response)=>{

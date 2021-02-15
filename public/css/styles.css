@@ -13,7 +13,7 @@ body {
 .weather-nav-bar-container{
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 50px 10px;
     max-width: 1170px;
     margin: 0 auto;
     transition: all 1s;
@@ -109,6 +109,7 @@ body {
 .weather-result-card main{
     padding: 30px 20px;
     color:#bfc1c8;
+    text-align: center;
 }
 
 .weather-result-temperature{
@@ -168,10 +169,15 @@ button {
 
 @media screen and (max-width: 768px){
     .weather-nav-bar-container{
-        padding:30px 0;
+        padding:30px 10px;
     }
     .weather-banner-container{
         padding: 0 20px;
+    }
+    .weather-form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .weather-form{
         flex-direction: column;
@@ -185,5 +191,18 @@ button {
     }
     input{
         width: auto;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .weather-app-info-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-nav-bar a{
+        padding: 5px 10px;
+    }
+    .weather-result-card{
+        width: 320px;
     }
 }
